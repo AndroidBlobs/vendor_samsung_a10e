@@ -1,0 +1,12 @@
+
+on boot
+
+# SIMLock Daemon
+on property:ro.boot.carrierid=AIO
+    start rsudaemon
+    service rsudaemon /system/bin/rsudaemon
+    class core
+    user system
+    group system
+    oneshot
+    disabled
