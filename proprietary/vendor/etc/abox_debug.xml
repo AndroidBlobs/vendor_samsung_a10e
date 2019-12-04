@@ -1,0 +1,82 @@
+<mixer>
+    <pcm_conf id="0">
+        <conf p_size="2048"/>
+        <conf p_count="2"/>
+    </pcm_conf>
+
+    <tbl>
+        <dma name="rd0" dump_id="0"/>
+        <dma name="rd1" dump_id="1"/>
+        <dma name="rd2" dump_id="2"/>
+        <dma name="rd3" dump_id="3"/>
+        <dma name="rd4" dump_id="10"/>
+        <dma name="rd5" dump_id="9"/>
+        <dma name="rd6" dump_id="12"/>
+        <dma name="rd7" dump_id="4"/>
+        <dma name="wr0" dump_id="5"/>
+        <dma name="wr1" dump_id="6"/>
+        <dma name="wr2" dump_id="11"/>
+        <dma name="wr3" dump_id="7"/>
+        <dma name="wr4" dump_id="8"/>
+        <dma name="fm0" dump_id="20"/>
+        <dma name="dec" dump_id="13"/>
+        <dma name="src" dump_id="14"/>
+    </tbl>
+
+    <case name="media_play-spk">
+        <dump dma="rd0" />
+        <dump dma="rd5" />
+        <dump dma="rd7" />
+    </case>
+    <case name="media_play-hp">
+        <dump dma="rd0" />
+        <dump dma="rd5" />
+    </case>
+    <case name="cp_call-rcv">
+        <dump dma="rd4" />
+        <dump dma="wr2" />
+    </case>
+    <case name="cp_call-spk">
+        <dump dma="rd4" />
+        <dump dma="wr2" />
+        <dump dma="rd7" />
+    </case>
+    <case name="cp_call-hp">
+        <dump dma="rd4" />
+        <dump dma="wr2" />
+    </case>
+    <case name="cp_call-bt">
+        <dump dma="rd4" />
+        <dump dma="wr2" />
+        <dump dma="rd6" />
+    </case>
+    <case name="ap_call-rcv">
+        <dump dma="rd0" />
+        <dump dma="wr3" />
+        <dump dma="wr1" />
+    </case>
+    <case name="ap_call-spk">
+        <dump dma="rd0" />
+        <dump dma="wr1" />
+        <dump dma="rd7" />
+    </case>
+    <case name="ap_call-hp">
+        <dump dma="rd0" />
+        <dump dma="wr3" />
+        <dump dma="wr1" />
+    </case>
+    <case name="ap_call-bt">
+        <dump dma="rd0" />
+        <dump dma="wr1" />
+        <dump dma="rd6" />
+    </case>
+    <case name="fm_radio-spk">
+        <dump dma="wr2" />
+        <dump dma="wr4" />
+        <dump dma="rd7" />
+    </case>
+    <case name="fm_radio-hp">
+        <dump dma="rd3" />
+        <dump dma="wr2" />
+    </case>
+</mixer>
